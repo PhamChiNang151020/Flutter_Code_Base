@@ -1,0 +1,3 @@
+class BaseBlocEvent {
+  BaseBlocEvent();
+}
