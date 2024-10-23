@@ -168,6 +168,21 @@ abstract class BaseApi<T> {
     }
 
     _showLoading();
+    switch (getRequestMethod()) {
+      case RequestMethod.POST:
+        await post();
+      case RequestMethod.GET:
+        await get();
+      case RequestMethod.PUT:
+        await put();
+      case RequestMethod.DELETE:
+        await delete();
+        break;
+      case RequestMethod.PATCH:
+        await patch();
+        break;
+    }
+
   }
 
   //*  ======================= INIT METHOD =======================
